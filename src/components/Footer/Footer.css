@@ -1,0 +1,25 @@
+.pie-de-pagina {
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  .redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .red-social {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .red-social:hover {
+    transform: scale(1.2);
+  }
+  
+  .derechos-autor {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+  }

@@ -1,0 +1,11 @@
+.portfolio {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #0404e2, #20adff, #00bbff);
+    color: white;
+  }
+  
+  .portfolio-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }

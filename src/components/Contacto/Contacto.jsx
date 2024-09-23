@@ -1,13 +1,7 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import './Contacto.css';
 
 export default function Contacto() {
-  const [ref, enVista] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
   const [datosFormulario, setDatosFormulario] = useState({ nombre: '', email: '', mensaje: '' });
 
   const manejarCambioInput = (e) => {
@@ -22,22 +16,16 @@ export default function Contacto() {
   };
 
   return (
-    <motion.section 
-      ref={ref}
-      className="py-16"
-      initial={{ opacity: 0, y: 20 }}
-      animate={enVista ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5 }}
-    >
-      <h2 className="text-4xl font-bold mb-8 text-center">Contacto</h2>
-      <form className="max-w-md mx-auto space-y-4" onSubmit={manejarEnvio}>
+    <section className="contacto">
+      <h2 className="contacto-titulo">Contacto</h2>
+      <form className="contacto-formulario" onSubmit={manejarEnvio}>
         <input 
           type="text"
           placeholder="Nombre" 
           name="nombre"
           value={datosFormulario.nombre}
           onChange={manejarCambioInput}
-          className="w-full p-2 bg-white bg-opacity-20 text-white placeholder-gray-300 rounded"
+          className="contacto-input"
         />
         <input 
           type="email" 
@@ -45,19 +33,19 @@ export default function Contacto() {
           name="email"
           value={datosFormulario.email}
           onChange={manejarCambioInput}
-          className="w-full p-2 bg-white bg-opacity-20 text-white placeholder-gray-300 rounded"
+          className="contacto-input"
         />
         <textarea 
           placeholder="Mensaje" 
           name="mensaje"
           value={datosFormulario.mensaje}
           onChange={manejarCambioInput}
-          className="w-full p-2 bg-white bg-opacity-20 text-white placeholder-gray-300 rounded"
+          className="contacto-textarea"
         />
-        <button type="submit" className="w-full p-2 bg-white text-purple-600 hover:bg-gray-100 rounded">
+        <button type="submit" className="contacto-boton">
           Enviar mensaje
         </button>
       </form>
-    </motion.section>
+    </section>
   );
 }

@@ -1,0 +1,16 @@
+.sobre-mi {
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .sobre-mi-titulo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+  
+  .sobre-mi-descripcion {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
